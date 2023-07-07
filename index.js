@@ -11,5 +11,22 @@ function func(str) {
     return newArr.trimEnd();
 }
 
-console.log(str);
-console.log(func(str))
+function remoteDuplicate(str) {
+    const chars = str.split('');
+    const repeteadChars = [];
+    const uniqueChars = [];
+    let newStr = '';
+    
+    for (let i = 0; i < chars.length; i++) {
+        if (uniqueChars.includes(chars[i]) && chars[i] !== ' ') {
+            repeteadChars.push(chars[i]);
+        } else {
+            uniqueChars.push(chars[i]);
+        }
+    }
+
+    newStr = uniqueChars.join('');
+    return newStr;
+}
+
+console.log(remoteDuplicate(str));
