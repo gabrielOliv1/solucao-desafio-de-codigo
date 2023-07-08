@@ -78,3 +78,17 @@ function maxLengthPalindrome(str) {
 
 const string = "bbabdadadadadad";
 console.log(maxLengthPalindrome(string));
+
+const str2 = "hello. how are you? i'm fine, thank you. hello. how are you? i'm fine, thank you. hello. how are you? i'm fine, thank you."
+
+function convertToUpperCase(str) {
+    const regex = /([.?!]\s)(\w)/g;
+    const newString = str.replace(regex, (match) => {
+        return match.toUpperCase();
+    })
+    newString.charAt(0).toUpperCase();
+
+    return newString;
+}
+
+console.log(convertToUpperCase(str2));
