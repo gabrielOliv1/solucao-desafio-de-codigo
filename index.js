@@ -92,6 +92,30 @@ function convertToUpperCase(str) {
 
 console.log(convertToUpperCase(str2));
 
+const str3 = "banana";
+
+function isAnagramPalindrome(str) {
+    const charCount = new Map();
+      
+    for (let char of str) {
+        if (char !== ' ') {
+            charCount.set(char, (charCount.get(char) || 0) + 1);
+        }
+    }
+      
+    let oddCount = 0;
+      
+    for (let count of charCount.values()) {
+        if (count % 2 !== 0) {
+            oddCount++;
+        }
+    }
+      
+    return oddCount <= 1;
+}
+
+console.log(func(str3));
+
 
 /*module.exports = {
     func,
