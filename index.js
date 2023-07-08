@@ -11,7 +11,7 @@ function func(str) {
     return newArr.trimEnd();
 }
 
-function remoteDuplicate(str) {
+function removeDuplicate(str) {
     const chars = str.split('');
     const repeteadChars = [];
     const uniqueChars = [];
@@ -29,4 +29,52 @@ function remoteDuplicate(str) {
     return newStr;
 }
 
-console.log(remoteDuplicate(str));
+console.log(removeDuplicate(str));
+
+function maxLengthPalindrome(str) {
+    let start = 0;
+    let maxLength = 0;
+
+    if (str.length < 1 || str === null) {
+        return '';
+    } else if (str.length < 2) {
+        maxLength = `${str[0]}`;
+
+        return maxLength;
+    }
+
+    for (let i = 0; i < str.length; i++) {
+        if ((str.length - i) < (maxLength / 2)) {
+            break;
+        }
+
+        let oddPalindrome = expandFromCenter(str, i, i);
+        let evenPalindrome = expandFromCenter(str, i - 1, i);
+
+        if (oddPalindrome > maxLength) {
+            maxLength = oddPalindrome;
+        }
+
+        if (evenPalindrome > maxLength) {
+            maxLength = evenPalindrome;
+        }
+    } 
+
+    function expandFromCenter(str, left, right) {
+        while(left >= 0 && right < str.length && (str[left] === str[right])) {
+            const newLength = right - left + 1;
+            if (newLength > maxLength) {
+                maxLength = newLength;
+                start = left;
+            }
+
+            right++;
+            left--;
+        }
+    }
+
+    return str.substring(start, start + maxLength);
+}
+
+const string = "bbabdadadadadad";
+console.log(maxLengthPalindrome(string));
