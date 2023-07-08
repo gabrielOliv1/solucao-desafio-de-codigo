@@ -35,7 +35,7 @@ function maxLengthPalindrome(str) {
     let start = 0;
     let maxLength = 0;
 
-    if (str.length < 1 || str === null) {
+    if (str == '' || str == null) {
         return '';
     } else if (str.length < 2) {
         maxLength = `${str[0]}`;
@@ -82,13 +82,20 @@ console.log(maxLengthPalindrome(string));
 const str2 = "hello. how are you? i'm fine, thank you. hello. how are you? i'm fine, thank you. hello. how are you? i'm fine, thank you."
 
 function convertToUpperCase(str) {
-    const regex = /([.?!]\s)(\w)/g;
+    const regex = /(^|[.?!]\s)(\w)/g;
     const newString = str.replace(regex, (match) => {
         return match.toUpperCase();
     })
-    newString.charAt(0).toUpperCase();
 
     return newString;
 }
 
 console.log(convertToUpperCase(str2));
+
+
+/*module.exports = {
+    func,
+    removeDuplicate,
+    maxLengthPalindrome,
+    convertToUpperCase
+};*/
