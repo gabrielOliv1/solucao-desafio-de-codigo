@@ -2,7 +2,7 @@
   "name": "pwc-teste",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.ts",
   "scripts": {
     "compile": "tsc",
     "start": "ts-node main.ts",
