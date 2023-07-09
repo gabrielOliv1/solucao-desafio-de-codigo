@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="./script.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>
+      Reverta a ordem das palavras nas frases, mantendo a ordem das letras.
+    </h2>
+    <form id="reverseWordOrderForm" action="" method="post">
+      <input type="text" id="reverseInput" placeholder="Insira a frase aqui" />
+      <button class="btn" type="button" onclick="reverse()">Enviar</button>
+    </form>
+    <h3 id="result">Output:</h3>
+    <h2>
+        Remova todos os caracteres duplicados da string.
+      </h2>
+      <form id="removeDuplicateForm" action="" method="post">
+        <input type="text" id="removeDuplicateInput" placeholder="Insira a string aqui" />
+        <button class="btn" type="button" onclick="remove()">Enviar</button>
+      </form>
+      <h3 id="removeDuplicateResult">Output:</h3>
+      <h2>
+        Encontre a substring palíndroma mais longa da string.
+      </h2>
+      <form id="maxLengthPalindromeForm" action="" method="post">
+        <input type="text" id="maxLengthPalindromeInput" placeholder="Insira a string aqui" />
+        <button class="btn" type="button" onclick="findPalindrome()">Enviar</button>
+      </form>
+      <h3 id="palindromeResult">Output:</h3>
+      <h2>
+        Coloque em maiúscula a primeira letra de cada frase na string.
+      </h2>
+      <form id="convertToUpperCaseForm" action="" method="post">
+        <input type="text" id="convertToUpperCaseInput" placeholder="Insira a string aqui" />
+        <button class="btn" type="button" onclick="toUpperCase()">Enviar</button>
+      </form>
+      <h3 id="convertToUpperCaseResult">Output:</h3>
+      <h2>
+        Verifique se a string é um anagrama de um palíndromo.
+      </h2>
+      <form id="isAnagramPalindromeForm" action="" method="post">
+        <input type="text" id="isAnagramPalindromeInput" placeholder="Insira a string aqui" />
+        <button class="btn" type="button" onclick="checkPalindromeAnagram()">Enviar</button>
+      </form>
+      <h3 id="isAnagramPalindromeResult">Output:</h3>
+
+    <script src="./dist/bundle.js" type="module"></script>
+  </body>
+</html>
