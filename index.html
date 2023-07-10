@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="module" src="./script.js"></script>
+    <script>
+      document.addEventListener("keydown", (event) => {
+        if (event.key == 'Enter') {
+          event.preventDefault();
+        }
+      })
+    </script>
 
     <title>Document</title>
   </head>
@@ -13,7 +20,7 @@
     </h2>
     <form id="reverseWordOrderForm" action="" method="post">
       <input type="text" id="reverseInput" placeholder="Insira a frase aqui" />
-      <button class="btn" type="button" onclick="reverse()">Enviar</button>
+      <button class="btn" type="button" onclick="reverse()">Clique para enviar</button>
     </form>
     <h3 id="result">Output:</h3>
     <h2>
@@ -21,7 +28,7 @@
       </h2>
       <form id="removeDuplicateForm" action="" method="post">
         <input type="text" id="removeDuplicateInput" placeholder="Insira a string aqui" />
-        <button class="btn" type="button" onclick="remove()">Enviar</button>
+        <button class="btn" type="button" onclick="remove()">Clique para enviar</button>
       </form>
       <h3 id="removeDuplicateResult">Output:</h3>
       <h2>
@@ -29,7 +36,7 @@
       </h2>
       <form id="maxLengthPalindromeForm" action="" method="post">
         <input type="text" id="maxLengthPalindromeInput" placeholder="Insira a string aqui" />
-        <button class="btn" type="button" onclick="findPalindrome()">Enviar</button>
+        <button class="btn" type="button" onclick="findPalindrome()">Clique para enviar</button>
       </form>
       <h3 id="palindromeResult">Output:</h3>
       <h2>
@@ -37,7 +44,7 @@
       </h2>
       <form id="convertToUpperCaseForm" action="" method="post">
         <input type="text" id="convertToUpperCaseInput" placeholder="Insira a string aqui" />
-        <button class="btn" type="button" onclick="toUpperCase()">Enviar</button>
+        <button class="btn" type="button" onclick="toUpperCase()">Clique para enviar</button>
       </form>
       <h3 id="convertToUpperCaseResult">Output:</h3>
       <h2>
@@ -45,7 +52,7 @@
       </h2>
       <form id="isAnagramPalindromeForm" action="" method="post">
         <input type="text" id="isAnagramPalindromeInput" placeholder="Insira a string aqui" />
-        <button class="btn" type="button" onclick="checkPalindromeAnagram()">Enviar</button>
+        <button class="btn" type="button" onclick="checkPalindromeAnagram()">Clique para enviar</button>
       </form>
       <h3 id="isAnagramPalindromeResult">Output:</h3>
 
